@@ -10,7 +10,7 @@ import {
   getDefaultNumber,
 } from '@vodyani/core';
 
-import { PaginationOptions } from './interface';
+import { PaginationOptions } from '../common';
 
 export async function pagination<T extends Model>(this: BaseClass<T> & typeof Model, options: PaginationOptions) {
   const result: PaginationResult<T> = {
