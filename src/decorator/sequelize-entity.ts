@@ -1,6 +1,6 @@
 import { BelongsTo, BelongsToMany, HasOne, HasMany, ModelClassGetter } from 'sequelize-typescript';
 
-import { EntityContainer } from './sequelize-entity-container';
+import { EntityContainer } from '../base';
 
 /**
  * Register the specified entity to the global container
