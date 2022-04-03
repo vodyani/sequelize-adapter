@@ -3,7 +3,7 @@ import { SequelizeOptions } from 'sequelize-typescript';
 
 import { BaseSequelize } from './sequelize';
 
-export class SequelizeAdapter implements AsyncClientAdapter {
+export class SequelizeAdapter implements AsyncClientAdapter<BaseSequelize> {
   public instance: BaseSequelize;
 
   constructor(option: SequelizeOptions, scope?: string) {
