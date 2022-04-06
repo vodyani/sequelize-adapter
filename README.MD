@@ -32,8 +32,6 @@ npm install @vodyani/sequelize-adapter
 import { TypeSequelize } from '@vodyani/sequelize-adapter';
 ```
 
-## Contributing
-
 ## License
 
 Vodyani sequelize-adapter is [MIT licensed](LICENSE).
