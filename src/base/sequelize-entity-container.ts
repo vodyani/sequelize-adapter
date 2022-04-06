@@ -1,6 +1,6 @@
-import { isValid } from '@vodyani/core';
+import { Container, isValid } from '@vodyani/core';
 
-export class EntityContainer {
+export class EntityContainer implements Container {
   private static readonly container: Map<string, Map<string, any>> = new Map();
 
   public static registry(scope: string, name: string, target: any) {

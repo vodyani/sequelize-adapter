@@ -7,6 +7,8 @@ import { pagination } from '../method';
 export class BaseEntity<T> extends Model<T> {
   /**
    * @param options PaginationQueryOptions
+   *
+   * @publicApi
    */
   public static pagination = pagination;
 }
