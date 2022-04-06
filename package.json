@@ -12,7 +12,9 @@
   "keywords": [
     "vodyani",
     "nodejs",
-    "jest",
+    "adapter",
+    "sequelize",
+    "sequelize-typescript",
     "javascript",
     "typescript",
     "npm-package"
@@ -64,6 +66,10 @@
   },
   "dependencies": {
     "@vodyani/core": "^0.2.9",
+    "sequelize": "^5.22.3",
+    "sequelize-typescript": "^1.1.0"
+  },
+  "peerDependencies": {
     "sequelize": "^5.22.3",
     "sequelize-typescript": "^1.1.0"
   },
