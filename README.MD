@@ -24,14 +24,6 @@ npm install @vodyani/sequelize-adapter
 - [sequelize-typescript](https://github.com/RobinBuschmann/sequelize-typescript) `v1`
 - [sequelize](https://github.com/sequelize/sequelize) `v5`
 
-### Usage
-
-> Due to naming conflicts, you need to introduce additional declare `TypeSequelize` when using `sequelize-typescript`.
-
-```
-import { TypeSequelize } from '@vodyani/sequelize-adapter';
-```
-
 ## License
 
 Vodyani sequelize-adapter is [MIT licensed](LICENSE).
