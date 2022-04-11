@@ -66,11 +66,10 @@
   },
   "dependencies": {
     "@vodyani/core": "^0.2.24",
-    "sequelize": "^5.22.3",
+    "sequelize": "^6.18.0",
     "sequelize-typescript": "^2.0.0"
   },
   "peerDependencies": {
-    "sequelize": "^5.22.3",
     "sequelize-typescript": "^2.0.0"
   },
   "devDependencies": {

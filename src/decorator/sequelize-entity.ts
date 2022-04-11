@@ -1,6 +1,5 @@
-import { BelongsTo, BelongsToMany, HasOne, HasMany, ModelClassGetter } from 'sequelize-typescript';
-
 import { EntityContainer } from '../base';
+import { BelongsTo, BelongsToMany, HasOne, HasMany, ModuleGetter } from '../common';
 
 /**
  * Register the specified entity to the global container
@@ -22,7 +21,7 @@ export const Entity = (scope: string) => {
  *  @MainToOne(() => UserAvatar, 'userId')
  *  userAvatar: UserAvatar;
  */
-export const MainToOne = (getter: ModelClassGetter, foreignKey: string) => {
+export const MainToOne = (getter: ModuleGetter, foreignKey: string) => {
   return HasOne(
     getter,
     {
@@ -43,7 +42,7 @@ export const MainToOne = (getter: ModelClassGetter, foreignKey: string) => {
  *  @MainToOne(() => User, 'userId')
  *  user: User;
  */
-export const OneToMain = (getter: ModelClassGetter, foreignKey: string, targetKey = 'id') => {
+export const OneToMain = (getter: ModuleGetter, foreignKey: string, targetKey = 'id') => {
   return BelongsTo(
     getter,
     {
@@ -64,7 +63,7 @@ export const OneToMain = (getter: ModelClassGetter, foreignKey: string, targetKe
  *  @MainToMany(() => UserOrders, 'userId')
  *  userOrders: UserOrders[];
  */
-export const MainToMany = (getter: ModelClassGetter, foreignKey: string) => {
+export const MainToMany = (getter: ModuleGetter, foreignKey: string) => {
   return HasMany(
     getter,
     {
@@ -85,7 +84,7 @@ export const MainToMany = (getter: ModelClassGetter, foreignKey: string) => {
  *  @MainToOne(() => User, 'userId')
  *  user: User;
  */
-export const ManyToMain = (getter: ModelClassGetter, foreignKey: string, targetKey = 'id') => {
+export const ManyToMain = (getter: ModuleGetter, foreignKey: string, targetKey = 'id') => {
   return BelongsTo(
     getter,
     {
@@ -108,7 +107,7 @@ export const ManyToMain = (getter: ModelClassGetter, foreignKey: string, targetK
  *  @ManyToMany(() => () => Role, () => RoleMapping, 'roleId')
  *  role: Role[];
  */
-export const ManyToMany = (getter: ModelClassGetter, mapping: ModelClassGetter, otherKey: string, targetKey = 'id') => {
+export const ManyToMany = (getter: ModuleGetter, mapping: ModuleGetter, otherKey: string, targetKey = 'id') => {
   return BelongsToMany(
     getter,
     {

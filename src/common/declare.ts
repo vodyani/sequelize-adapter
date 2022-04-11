@@ -13,5 +13,7 @@ export {
   Model,
   ScopeOptions,
   Sequelize,
+  ModelStatic,
+  Validator,
   ThroughOptions,
 } from 'sequelize-typescript';
