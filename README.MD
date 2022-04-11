@@ -21,8 +21,8 @@ npm install @vodyani/sequelize-adapter
 
 ## Dependencies
 
-- [sequelize-typescript](https://github.com/RobinBuschmann/sequelize-typescript) `v1`
-- [sequelize](https://github.com/sequelize/sequelize) `v5`
+- [sequelize-typescript](https://github.com/RobinBuschmann/sequelize-typescript) `v2`
+- [sequelize](https://github.com/sequelize/sequelize) `v6`
 
 ## License
 
