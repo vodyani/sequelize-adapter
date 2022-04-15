@@ -1,7 +1,7 @@
 {
   "name": "@vodyani/sequelize-adapter",
   "license": "MIT",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "author": "ChoGathK",
   "description": "sequelize-adapter",
   "homepage": "https://github.com/vodyani/sequelize-adapter#readme",
@@ -66,12 +66,12 @@
   },
   "dependencies": {
     "@vodyani/core": "^0.2.30",
-		"sequelize": "^5.22.3",
-		"sequelize-typescript": "^1.1.0"
+    "sequelize": "^5.22.3",
+    "sequelize-typescript": "^1.1.0"
   },
   "peerDependencies": {
-		"sequelize": "^5.22.3",
-		"sequelize-typescript": "^1.1.0"
+    "sequelize": "^5.22.3",
+    "sequelize-typescript": "^1.1.0"
   },
   "devDependencies": {
     "@commitlint/cli": "16.2.3",
