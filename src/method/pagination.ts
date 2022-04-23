@@ -1,18 +1,11 @@
 import { Model } from 'sequelize';
-import {
-  isValid,
-  BaseClass,
-  getDefault,
-  isValidArray,
-  isValidObject,
-  PaginationResult,
-  getDefaultString,
-  getDefaultNumber,
-} from '@vodyani/core';
+import { Class, PaginationResult } from '@vodyani/core';
+import { isValidObject, isValid, isValidArray } from '@vodyani/validator';
+import { getDefault, getDefaultNumber, getDefaultString } from '@vodyani/transformer';
 
 import { PaginationOptions } from '../common';
 
-export async function pagination<T extends Model>(this: BaseClass<T> & typeof Model, options: PaginationOptions) {
+export async function pagination<T extends Model>(this: Class<T> & typeof Model, options: PaginationOptions) {
   const result: PaginationResult<T> = {
     rows: [],
     page: {

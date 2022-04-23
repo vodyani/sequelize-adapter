@@ -65,7 +65,9 @@
     ]
   },
   "dependencies": {
-    "@vodyani/core": "^0.2.30",
+    "@vodyani/core": "^0.3.6",
+    "@vodyani/transformer": "^0.0.1",
+    "@vodyani/validator": "^0.0.1",
     "sequelize": "^5.22.3",
     "sequelize-typescript": "^1.1.0"
   },

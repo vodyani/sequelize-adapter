@@ -1,5 +1,5 @@
+import { isValidArray, isValidObject } from '@vodyani/validator';
 import { Sequelize, SequelizeOptions } from 'sequelize-typescript';
-import { isValidArray, isValidObject } from '@vodyani/core';
 
 import { EntityContainer } from './sequelize-entity-container';
 
