@@ -1,7 +1,6 @@
 import { Model } from 'sequelize';
 import { Class, PaginationResult } from '@vodyani/core';
-import { isValidObject, isValid, isValidArray } from '@vodyani/validator';
-import { getDefault, getDefaultNumber, getDefaultString } from '@vodyani/transformer';
+import { convert, convertNumber, convertString } from '@vodyani/transformer';
 
 import { PaginationOptions } from '../common';
 
@@ -16,18 +15,18 @@ export async function pagination<T extends Model>(this: Class<T> & typeof Model,
     },
   };
 
-  if (!isValidObject(options)) {
+  if (!options) {
     return result;
   }
 
   const { pagination, findOptions } = options;
 
-  const orderBy = getDefault(pagination.orderBy);
-  const size = getDefaultNumber(pagination.size, 20);
-  const index = getDefaultNumber(pagination.index, 1);
-  const orderRule = getDefaultString(pagination.orderRule, 'DESC');
+  const orderBy = convert(pagination.orderBy);
+  const size = convertNumber(pagination.size, 20);
+  const index = convertNumber(pagination.index, 1);
+  const orderRule = convertString(pagination.orderRule, 'DESC');
 
-  if (isValid(orderBy)) {
+  if (orderBy) {
     findOptions.order = [[orderBy, orderRule]];
   }
 
@@ -36,7 +35,7 @@ export async function pagination<T extends Model>(this: Class<T> & typeof Model,
 
   const data = await this.findAndCountAll(findOptions);
 
-  if (!isValidObject(data) || !isValidArray(data.rows)) {
+  if (!data?.rows) {
     return result;
   }
 
